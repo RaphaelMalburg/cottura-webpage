@@ -20,7 +20,6 @@ const Navbar = () => {
   const [isHome, setIsHome] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  const animationControls = useAnimation(); // Initialize useAnimation
 
   const handleMobileNavToggle = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
