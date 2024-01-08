@@ -74,8 +74,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        {isMobileNavOpen && <NavbarMobile />}
-        <div className="z-50 my-4 absolute top-0 right-4">
+        <div className="absolute w-full h-full top-0 right-0">{isMobileNavOpen && <NavbarMobile />}</div>
+
+        <div className="z-50 my-4 ">
           {isMobileNavOpen ? (
             <IoClose className="block md:hidden m-4 cursor-pointer " size={35} onClick={handleMobileNavToggle} />
           ) : (
