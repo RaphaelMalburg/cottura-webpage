@@ -54,23 +54,23 @@ const Navbar = () => {
 
   return (
     <nav className={`${montserrat.className}  fixed  top-0 z-20   w-full  `}>
-      <div className={`content-container flex justify-between top-0  ${isScrolled ? "bg-Beige " : "bg-transparent"}`}>
+      <div className={`content-container flex justify-between top-0  ${isScrolled ? "bg-[#F2F2F2]/90 " : "bg-transparent"}`}>
         <div className="my-4">
           {isScrolled ? <Image src="/cotturalogoblack.png" alt="logo" width={80} height={80} /> : <Image src="/cotturalogowhite.png" alt="logo" width={80} height={80} />}
         </div>
-        <div className={clsx("mx-auto my-auto hidden md:block z-50 text-Beige", { "text-Black ": isHome || isScrolled })}>
-          <ul className="flex [&>li]:px-6 lg:[&>li]:px-10 font-medium tracking-wide text-custom-Beige ">
+        <div className={clsx("mx-auto my-auto hidden md:block z-50 text-Black ", { "text-Black ": isHome || isScrolled })}>
+          <ul className="flex font-bold [&>li]:px-6 lg:[&>li]:px-10  tracking-wide text-custom-Beige ">
             <li>
-              <Link href={"/"}>Quem Somos</Link>
+              <Link href={"/"}>O Cottura</Link>
+            </li>
+            <li>
+              <Link href={"/"}>Receitas</Link>
             </li>
             <li>
               <Link href={"/"}>Produtos</Link>
             </li>
             <li>
-              <Link href={"/"}>Cursos</Link>
-            </li>
-            <li>
-              <Link href={"/"}>Receitas</Link>
+              <Link href={"/"}>Workshops</Link>
             </li>
           </ul>
         </div>

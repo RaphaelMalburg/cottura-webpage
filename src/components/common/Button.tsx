@@ -13,7 +13,7 @@ const Button = ({ children, className, href, variant }: ButtonProps) => {
       case "primary":
         return "bg-Beige text-CooperDark";
       case "secondary":
-        return "bg-CooperDark text-Beige";
+        return "bg-Cooper text-Beige";
       case "tertiary":
         return "bg-Cooper text-Beige";
       default:
@@ -22,7 +22,7 @@ const Button = ({ children, className, href, variant }: ButtonProps) => {
   };
 
   return (
-    <button className={`px-4 py-2 rounded cursor-pointer transition duration-300 ease-in-out text-lg md:text-2xl  ${variantResult()} ${className}`}>
+    <button className={`px-8 py-4  cursor-pointer rounded-full transition duration-300 ease-in-out text-lg md:text-2xl  ${variantResult()} ${className}`}>
       <Link href={href}>{children}</Link>
     </button>
   );

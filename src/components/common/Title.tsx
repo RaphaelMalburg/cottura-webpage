@@ -4,7 +4,7 @@ interface TitleProps {
 }
 
 const Title = ({ children, className }: TitleProps) => {
-  return <div className={`text-2xl leading-relaxed md:text-4xl font-medium tracking-wide  ${className}`}>{children}</div>;
+  return <div className={`text-2xl   leading-tight md:text-[46px] font-medium tracking-wide   ${className}`}>{children}</div>;
 };
 
 export default Title;
