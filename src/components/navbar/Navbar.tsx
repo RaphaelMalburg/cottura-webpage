@@ -58,8 +58,8 @@ const Navbar = () => {
         <div className="my-4">
           {isScrolled ? <Image src="/cotturalogoblack.png" alt="logo" width={80} height={80} /> : <Image src="/cotturalogowhite.png" alt="logo" width={80} height={80} />}
         </div>
-        <div className={clsx("mx-auto my-auto hidden md:block z-50 text-Black ", { "text-Black ": isHome || isScrolled })}>
-          <ul className="flex font-bold [&>li]:px-6 lg:[&>li]:px-10  tracking-wide text-custom-Beige ">
+        <div className={clsx("mx-auto my-auto hidden sm:block z-50 text-Black ", { "text-Black ": isHome || isScrolled })}>
+          <ul className="flex font-bold sm:[&>li]:px-4 lg:[&>li]:px-10  tracking-wide text-custom-Beige ">
             <li>
               <Link href={"/"}>O Cottura</Link>
             </li>
@@ -78,9 +78,9 @@ const Navbar = () => {
 
         <div className="z-50 my-4 ">
           {isMobileNavOpen ? (
-            <IoClose className="block md:hidden m-4 cursor-pointer " size={35} onClick={handleMobileNavToggle} />
+            <IoClose className="block sm:hidden m-4 cursor-pointer " size={35} onClick={handleMobileNavToggle} />
           ) : (
-            <IoMenu className={`${isScrolled ? "text-black" : "text-white"} block md:hidden m-4  cursor-pointer `} size={35} onClick={handleMobileNavToggle} />
+            <IoMenu className={`block sm:hidden m-4  cursor-pointer `} size={35} onClick={handleMobileNavToggle} />
           )}
         </div>
       </div>
@@ -89,3 +89,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+{
+  /*${isScrolled ? "text-black" : "text-white"} */
+}
