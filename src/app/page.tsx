@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="w-full h-screen mx-auto  overflow-hidden">
+    <main className="w-full  mx-auto  overflow-hidden">
       <Hero2 />{" "}
       {/*   <Hero />
       <Products />*/}
