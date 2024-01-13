@@ -8,7 +8,7 @@ import { IoMenu } from "react-icons/io5";
 
 export function Nav() {
   return (
-    <nav className="w-full fixed top-3 h-fit  border-0">
+    <nav className="w-full fixed top-3 h-fit z-50 bg-gray-100/80 border-0">
       <div className="container mx-auto flex items-center justify-between">
         {" "}
         <Image src="/cotturalogoblack.png" alt="logo" className="mr-10" width={80} height={80} />
@@ -34,7 +34,7 @@ export function Nav() {
               <IoMenu size={35} />
             </Button>
           </SheetTrigger>
-          <SheetContent side={"right"} className=" opacity-80">
+          <SheetContent side={"right"} className="  bg-gray-100/85">
             <ul className=" flex flex-col z-50 h-full w-full justify-center items-center gap-40 font-bold  tracking-wide text-lg my-auto">
               {" "}
               <li>
