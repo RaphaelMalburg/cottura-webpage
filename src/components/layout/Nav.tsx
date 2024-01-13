@@ -1,14 +1,39 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 
 export function Nav() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const scrollY = useRef(0);
+
+  const handleMobileNavToggle = () => {
+    setIsMobileNavOpen(!isMobileNavOpen);
+  };
+  useEffect(() => {
+    const detectScrollY = () => {
+      scrollY.current = window.scrollY;
+      if (scrollY.current > 5) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", detectScrollY);
+
+    return () => {
+      window.removeEventListener("scroll", detectScrollY);
+    };
+  }, []);
   return (
-    <nav className="w-full fixed top-3 h-fit z-50 bg-gray-100/80 border-0">
+    <nav className={`w-full fixed top-3 h-fit z-50 border-0 ${isScrolled ? "bg-gray-100/80 " : "bg-transparent"}`}>
       <div className="container mx-auto flex items-center justify-between">
         {" "}
         <Image src="/cotturalogoblack.png" alt="logo" className="mr-10" width={80} height={80} />
