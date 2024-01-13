@@ -7,8 +7,8 @@ const Hero = () => {
   return (
     <section className=" pt-20 content-container   w-full">
       {" "}
-      <div className=" md:w-7/12 w-full absolute h-[720px] bg-gray-100  rounded-br-[140px] -z-20" />
-      <div className="grid grid-cols-1 relative">
+      <div className=" md:w-7/12 w-full absolute h-[720px] bg-gray-100  rounded-br-[140px]   -z-20" />
+      <div className="grid grid-cols-1 relative ">
         <div className=" pt-10 md:w-1/2 ">
           <Title className="text-Black font-semibold mb-10">
             Massas <span className=" text-Cooper">frescas</span>,<br /> molhos <span className=" text-Cooper">artesanais</span> e<br /> produtos
@@ -35,11 +35,11 @@ const Hero = () => {
             </div>{" "}
           </div>
           {/**inicio div com img */}
-          <div className="md:absolute md:-top-[300px] md:left-[600px] xl:left-[800px] relative z-20 ml-10 cols-span-2 -mt-20 w-[180px] h-[440px] md:w-[420px] md:h-[820px] col-span-2">
-            <Image src="/pastanest.png" alt="logo" fill className="-mt-10  z-20 object-cover" />
+          <div className="md:absolute md:-top-[300px] md:left-[600px]  xl:left-[800px] relative -z-20 ml-10 cols-span-2 -mt-20 w-[180px] h-[440px] md:w-[420px] md:h-[820px] col-span-2">
+            <Image src="/pastanest.png" alt="logo" fill className="-mt-10  object-cover" />
           </div>
         </div>
-        <Button href="/" className="md:w-1/2 md:mt-10 " variant="secondary">
+        <Button href="/" className="md:w-1/2 md:mt-10 z-10" variant="secondary">
           Confira nossas receitas
         </Button>
       </div>

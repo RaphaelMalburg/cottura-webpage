@@ -56,7 +56,8 @@ const Navbar = () => {
     <nav className={`${montserrat.className}  fixed  top-0 z-20   w-full  `}>
       <div className={`content-container flex justify-between top-0  ${isScrolled ? "bg-[#F2F2F2]/90 " : "bg-transparent"}`}>
         <div className="my-4">
-          {isScrolled ? <Image src="/cotturalogoblack.png" alt="logo" width={80} height={80} /> : <Image src="/cotturalogowhite.png" alt="logo" width={80} height={80} />}
+          <Image src="/cotturalogoblack.png" alt="logo" width={80} height={80} />
+          {/*isScrolled ? <Image src="/cotturalogoblack.png" alt="logo" width={80} height={80} /> : <Image src="/cotturalogowhite.png" alt="logo" width={80} height={80} />*/}
         </div>
         <div className={clsx("mx-auto my-auto hidden sm:block z-50 text-Black ", { "text-Black ": isHome || isScrolled })}>
           <ul className="flex font-bold sm:[&>li]:px-4 lg:[&>li]:px-10  tracking-wide text-custom-Beige ">
@@ -76,7 +77,7 @@ const Navbar = () => {
         </div>
         <div className="absolute w-full h-full top-0 right-0">{isMobileNavOpen && <NavbarMobile />}</div>
 
-        <div className="z-50 my-4 ">
+        <div className=" z-40 my-4 ">
           {isMobileNavOpen ? (
             <IoClose className="block sm:hidden m-4 cursor-pointer " size={35} onClick={handleMobileNavToggle} />
           ) : (
