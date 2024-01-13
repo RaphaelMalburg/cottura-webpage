@@ -40,7 +40,7 @@ const Hero2 = () => {
             height={576}
             src="/pastanest.png"
             alt="Pasta nest"
-            className="  hidden  h-full max-h-[30rem]  max-w-[15rem] -translate-y-32 md:max-h-[38rem]  md:max-w-[18rem] lg:-mt-40 lg:max-h-[48rem] lg:max-w-[24rem] lg:translate-y-0"
+            className="  hidden lg:block h-full max-h-[30rem]  max-w-[15rem] -translate-y-32 md:max-h-[38rem]  md:max-w-[18rem] lg:-mt-40 lg:max-h-[48rem] lg:max-w-[24rem] lg:translate-y-0"
           />
           <div className="grid cols-span-1 grid-cols-2 lg:hidden  ">
             <div className=" grid md:grid-cols-3 md:gap-10">
