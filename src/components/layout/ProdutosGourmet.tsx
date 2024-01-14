@@ -10,7 +10,7 @@ const ProdutosGourmet = () => {
   const imageList = ["/agnolotti.jpg", "/tortelloni.jpg", "/agnolotti2.jpg", "/cantucci.jpg"];
   return (
     <div className="pt-28 lg:pt-20 grid  w-full relative">
-      <div className="md:container flex justify-around">
+      <div className="md:container mx-auto mb-6 md:mb-0 flex justify-around md:flex-row flex-col">
         {" "}
         <Title className="text-Black  font-semibold mb-10">
           Produtos <span className=" text-Cooper">Gourmet</span>
@@ -38,12 +38,9 @@ const ProdutosGourmet = () => {
                 <CarouselSpacing arrayImages={imageList} className=" " />
               </div>
             </div>{" "}
-            <Button className="mt-10 w-full md:hidden  mx-auto px-10 ">
-              <Link href="/">Confira nossas receitas</Link>
-            </Button>
           </div>
           {/**inicio img mobile */}
-          <div className=" md:block ml-10 flex justify-center ">
+          <div className=" md:flex hidden ml-10 justify-center ">
             <CarouselSpacing arrayImages={imageList} className="" />
           </div>
         </div>
