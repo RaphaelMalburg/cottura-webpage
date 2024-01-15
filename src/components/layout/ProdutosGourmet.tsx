@@ -16,15 +16,15 @@ const ProdutosGourmet = () => {
           Produtos <span className=" text-Cooper">Gourmet</span>
         </Title>
         <Button size={"lg"} variant={"default"} className="    ">
-          <Link href="/">Confira nossas receitas</Link>
+          <Link href="/">Produtos</Link>
         </Button>
       </div>
       <div></div>
-      <div className="md:ml-[350px] lg:ml-[650px] w-full absolute h-[720px] bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0" />
+      <div className="md:ml-[350px] lg:ml-[650px] w-full absolute h-[750px] bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0" />
       <header className="grid px-8">
         <div className="md:container mx-auto  grid h-full w-full grid-cols-1  lg:mt-14 md:grid-cols-2">
           <div className="col-span-1">
-            <Title className="text-Black  font-semibold mb-10">
+            <Title className="text-Black font-semibold mb-10">
               Descubra o prazer de cozinhar com os <span className=" text-Cooper">melhores</span> ingredientes
             </Title>
             <Description className="text-Black mb-10 z-20">

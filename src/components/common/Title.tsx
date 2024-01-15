@@ -5,7 +5,7 @@ interface TitleProps {
 
 const Title = ({ children, className }: TitleProps) => {
   return (
-    <div className={`text-[23px]  drop-shadow-md z-20  leading-relaxed md:text-[32px] xl:text-[46px] sm:text-3xl font-medium tracking-wide md:leading-1  ${className}`}>
+    <div className={`text-[23px]  drop-shadow-md z-20  leading-relaxed md:leading-1 md:text-[32px] xl:text-[46px] sm:text-3xl font-medium tracking-wide   ${className}`}>
       {children}
     </div>
   );
