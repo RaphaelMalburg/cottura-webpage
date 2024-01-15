@@ -27,7 +27,7 @@ const ProdutosGourmet = () => {
             <Title className="text-Black font-semibold mb-10">
               Descubra o prazer de cozinhar com os <span className=" text-Cooper">melhores</span> ingredientes
             </Title>
-            <Description className="text-Black mb-10 z-20">
+            <Description className="text-Black mb-10 z-20 ">
               Em nossa loja, oferecemos uma seleção excepcional de crispies de Parma, crocantes de parmesão, molho funghi, molho de tomates, farinha italiana premium e acessórios
               de alta qualidade, tudo para elevar sua paixão pela culinária.
             </Description>

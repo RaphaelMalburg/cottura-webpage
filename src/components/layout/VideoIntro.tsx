@@ -11,8 +11,8 @@ export function VideoIntro() {
     <div className="p-8  ">
       <div className=" mx-auto place-content-center rounded-xl relative md:w-8/12  py-4 shadow-md h-fit md:pb-40 pb-32">
         <Image src={"/pastabg.svg"} fill alt="pasta bg" className="  object-cover object-right opacity-10 -z-50" />
-        <div className=" text-center">
-          <Title className="my-10">Massas feitas a mão</Title>
+        <div className=" ">
+          <Title className="my-10 text-center">Massas feitas a mão</Title>
           <Description className="font-normal mx-auto  drop-shadow-md  ">
             Cada massa no Cottura é uma obra-prima artesanal.
             <br /> De formatos clássicos a criações inovadoras, nossa variedade oferece algo para todos os gostos. Experimente a autenticidade em cada garfada.
