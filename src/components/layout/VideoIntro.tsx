@@ -9,7 +9,7 @@ import Description from "../common/Description";
 export function VideoIntro() {
   return (
     <div className="p-8  ">
-      <div className=" mx-auto place-content-center rounded-xl relative md:w-8/12  py-4 shadow-md h-fit md:pb-40 pb-32">
+      <div className=" container mx-auto place-content-center rounded-xl relative md:w-8/12  py-4 shadow-md h-fit md:pb-40 pb-32">
         <Image src={"/pastabg.svg"} fill alt="pasta bg" className="  object-cover object-right opacity-10 -z-50" />
         <div className=" mx-auto">
           <Title className="my-10 text-center">Massas feitas a mão</Title>

@@ -37,20 +37,30 @@ export function Nav() {
     <nav className={`w-full fixed top-0 h-fit py-4 z-50 border-0 ${isScrolled ? "bg-gray-100/80 " : "bg-transparent"}`}>
       <div className="container mx-auto flex items-center justify-between">
         {" "}
-        <Image src="/cotturalogoblack.png" alt="logo" className="mr-10" width={80} height={80} />
+        <Link href={"/"}>
+          <Image src="/cotturalogoblack.png" alt="logo" className="mr-10" width={80} height={80} />
+        </Link>
         <ul className=" hidden lg:flex w-full justify-center items-center gap-20 font-bold  tracking-wide text-lg my-auto cursor-pointer">
           {" "}
           <li>
-            <Link href={"/"}>O Cottura</Link>
+            <Link href={"/about"} className=" hover:border-2 border-Cooper px-2 py-1">
+              O Cottura
+            </Link>
           </li>
           <li>
-            <Link href={"/"}>Receitas</Link>
+            <Link href={"/"} className="hover:border-2 border-Cooper px-2 py-1">
+              Receitas
+            </Link>
           </li>
           <li>
-            <Link href={"/"}>Produtos</Link>
+            <Link href={"/"} className="hover:border-2 border-Cooper px-2 py-1">
+              Produtos
+            </Link>
           </li>
           <li className=" ">
-            <Link href={"/"}>Workshops</Link>
+            <Link href={"/"} className="hover:border-2 border-Cooper px-2 py-1">
+              Workshops
+            </Link>
           </li>
         </ul>
         <Sheet>
@@ -64,7 +74,7 @@ export function Nav() {
             <ul className=" flex flex-col z-50 h-full w-full justify-center items-center gap-40 font-bold  tracking-wide text-lg my-auto">
               {" "}
               <li>
-                <Link href={"/"} className=" p-4">
+                <Link href={"/"} className=" w-auto p-4">
                   O Cottura
                 </Link>
               </li>

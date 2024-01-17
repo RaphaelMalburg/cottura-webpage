@@ -3,7 +3,7 @@ import Title from "../common/Title";
 import Description from "../common/Description";
 import Button from "../common/Button";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Input } from "../ui/input";
 
 const Footer = () => {
@@ -47,7 +47,7 @@ const Footer = () => {
             <div className="grid w-fit lg:pl-40 md:pl-0 h-full  md:h-fit ">
               <div className="hidden mx-auto items-center md:grid grid-cols-1 md:grid-cols-3  my-20  gap-14">
                 <FaFacebook className="text-white text-5xl hover:scale-110" />
-                <FaTwitter className="text-white text-5xl hover:scale-110" />
+                <FaWhatsapp className="text-white text-5xl hover:scale-110" />
                 <FaInstagram className="text-white text-5xl hover:scale-110" />
               </div>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
             </ul>
             <div className="items-center mx-auto flex  py-2 flex-col justify-between">
               <FaFacebook className="text-white text-3xl  hover:scale-110" />
-              <FaTwitter className="text-white text-3xl hover:scale-110" />
+              <FaWhatsapp className="text-white text-3xl hover:scale-110" />
               <FaInstagram className="text-white text-3xl hover:scale-110" />
             </div>
           </div>

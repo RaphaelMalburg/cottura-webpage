@@ -17,7 +17,7 @@ const Hero = () => {
               <span className=" text-Cooper"> gourmet</span>
             </Title>
             <Description className="text-Black mb-10 z-20">Tudo cuidadosamente escolhido para transformar suas refeições em momentos extraordinários</Description>
-            <div className="grid  grid-cols-2 md:grid-cols-1  h-96 ">
+            <div className="grid grid-cols-2 md:grid-cols-1  h-96 ">
               {" "}
               <div className="grid grid-rows-3  justify-center mt-10 h-fit sm:grid-rows-1 sm:grid-cols-3 z-40 md:gap-10 gap-10">
                 <div className=" md:my-0 flex flex-col justify-start  ">
