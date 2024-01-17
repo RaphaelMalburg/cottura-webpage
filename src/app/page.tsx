@@ -1,5 +1,6 @@
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/layout/Hero";
-import Location from "@/components/layout/Location";
+
 import PastaCourse from "@/components/layout/PastaCourse";
 
 import ProdutosGourmet from "@/components/layout/ProdutosGourmet";
@@ -13,7 +14,8 @@ export default function Home() {
       <VideoIntro />
       <ProdutosGourmet />
       <PastaCourse />
-      <Location />
+
+      <Footer />
     </main>
   );
 }

@@ -32,8 +32,9 @@ export function Nav() {
       window.removeEventListener("scroll", detectScrollY);
     };
   }, []);
+
   return (
-    <nav className={`w-full fixed top-3 h-fit z-50 border-0 ${isScrolled ? "bg-gray-100/80 " : "bg-transparent"}`}>
+    <nav className={`w-full fixed top-0 h-fit py-4 z-50 border-0 ${isScrolled ? "bg-gray-100/80 " : "bg-transparent"}`}>
       <div className="container mx-auto flex items-center justify-between">
         {" "}
         <Image src="/cotturalogoblack.png" alt="logo" className="mr-10" width={80} height={80} />

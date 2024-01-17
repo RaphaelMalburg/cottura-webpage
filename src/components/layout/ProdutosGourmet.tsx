@@ -9,7 +9,7 @@ import { CarouselSpacing } from "../common/Carousel";
 const ProdutosGourmet = () => {
   const imageList = ["/agnolotti.jpg", "/tortelloni.jpg", "/agnolotti2.jpg", "/cantucci.jpg"];
   return (
-    <div className="pt-28 lg:pt-20 grid  w-full relative">
+    <div className="pt-28 lg:pt-20 grid md:h-[580px]  lg:h-[780px]  w-full relative">
       <div className="md:container mx-auto mb-6 md:mb-0 flex justify-around md:flex-row flex-col">
         {" "}
         <Title className="text-Black  font-semibold mb-10">
@@ -20,7 +20,7 @@ const ProdutosGourmet = () => {
         </Button>
       </div>
       <div></div>
-      <div className="md:ml-[350px] lg:ml-[650px] w-full absolute h-[750px] bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0" />
+      <div className="md:ml-[350px] lg:ml-[650px] w-full absolute h-[980px] sm:h-[650px]  bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0" />
       <header className="grid px-8">
         <div className="md:container mx-auto  grid h-full w-full grid-cols-1  lg:mt-14 md:grid-cols-2">
           <div className="col-span-1">
