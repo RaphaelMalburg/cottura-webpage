@@ -6,7 +6,7 @@ import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHe
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { IoMenu } from "react-icons/io5";
+import { IoClose, IoMenu } from "react-icons/io5";
 
 export function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,6 +16,11 @@ export function Nav() {
   const handleMobileNavToggle = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
+
+  const closeMobileNav = () => {
+    setIsMobileNavOpen(false);
+  };
+
   useEffect(() => {
     const detectScrollY = () => {
       scrollY.current = window.scrollY;
@@ -32,7 +37,6 @@ export function Nav() {
       window.removeEventListener("scroll", detectScrollY);
     };
   }, []);
-
   return (
     <nav className={`w-full fixed top-0 h-fit py-4 z-50 border-0 ${isScrolled ? "bg-gray-100/80 " : "bg-transparent"}`}>
       <div className="container mx-auto flex items-center justify-between">
@@ -62,40 +66,42 @@ export function Nav() {
               Workshops
             </Link>
           </li>
-        </ul>
-        <Sheet>
-          <SheetTrigger asChild className="lg:hidden block">
-            <Button variant="ghost">
-              {" "}
-              <IoMenu size={35} />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side={"right"} className="  bg-gray-100/85">
-            <ul className=" flex flex-col z-50 h-full w-full justify-center items-center gap-40 font-bold  tracking-wide text-lg my-auto">
-              {" "}
+        </ul>{" "}
+        <div className="lg:hidden block">
+          <Button variant="ghost" onClick={handleMobileNavToggle}>
+            <IoMenu size={35} />
+          </Button>
+          {isMobileNavOpen && <div className="fixed inset-0 bg-Black" onClick={closeMobileNav}></div>}
+        </div>
+        {isMobileNavOpen && (
+          <div onClick={closeMobileNav} className="fixed inset-0  bg-gray-100/85">
+            <div className=" cursor-pointer m-4 absolute">
+              <IoClose size={35} onClick={closeMobileNav} />
+            </div>
+            <ul className="flex flex-col z-50 h-full w-full justify-center items-center gap-40 font-bold tracking-wide text-lg my-auto">
               <li>
-                <Link href={"/"} className=" w-auto p-4">
+                <Link href={"/about"} className="w-auto p-4" onClick={closeMobileNav}>
                   O Cottura
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className=" p-4">
+                <Link href={"/"} className="p-4" onClick={closeMobileNav}>
                   Receitas
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className=" p-4">
+                <Link href={"/"} className="p-4" onClick={closeMobileNav}>
                   Produtos
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className=" p-4">
+                <Link href={"/"} className="p-4" onClick={closeMobileNav}>
                   Workshops
                 </Link>
               </li>
             </ul>
-          </SheetContent>
-        </Sheet>{" "}
+          </div>
+        )}
       </div>
     </nav>
   );

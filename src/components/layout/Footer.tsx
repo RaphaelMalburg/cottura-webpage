@@ -11,7 +11,7 @@ const Footer = () => {
     <section className=" w-full h-fit bg-Cooper ">
       <div>
         <Title className=" text-Beige mx-auto w-fit py-10">Localização</Title>
-        <Image src={"/pastaTayna.png"} width={1200} height={600} alt="mapa" className="mx-auto" />
+        <Image src={"/pastaTayna.png"} width={900} height={400} alt="mapa" className="mx-auto" />
       </div>
       <div className="container">
         <Description className=" text-Beige mx-auto w-fit py-4">
@@ -38,10 +38,12 @@ const Footer = () => {
           {" "}
           <div className="grid md:grid-cols-2 grid-cols-1  container items-center gap-4 w-full mx-auto  ">
             <Description className=" md:col-span-2 ">Newsletter</Description>
-            <Input type="text" placeholder="Seu email aqui" className=" text-white mds:py-6 px-4 rounded-md " />
-            <Button href="/" variant="primary" className=" py-2 px-4 rounded-md max-w-[490px]">
-              Inscreva-se
-            </Button>
+            <div className=" col-span-2 grid grid-cols-2 gap-2">
+              <Input type="text" placeholder="Seu email aqui" className=" text-white mds:py-6 px-4 rounded-md justify-self-end max-w-[400px]" />
+              <Button href="/" variant="primary" className=" py-2 px-4 rounded-md max-w-[490px]">
+                Inscreva-se
+              </Button>
+            </div>
           </div>
           <div className="container mx-auto flex md:justify-center justify-between items-center">
             <div className="grid w-fit lg:pl-40 md:pl-0 h-full  md:h-fit ">

@@ -10,29 +10,36 @@ const About = () => {
   return (
     <div className="pt-36 lg:pt-40 grid w-full relative">
       <div className="grid px-8 container">
-        <div className="md:container mx-auto  grid h-full w-full grid-cols-1  lg:mt-14 md:grid-cols-2">
-          <div className="col-span-1">
-            <Title className="text-Black font-semibold mb-10">
-              Descubra o prazer de cozinhar com os <span className=" text-Cooper">melhores</span> ingredientes
-            </Title>
+        <div className="md:container mx-auto  grid h-fit w-full grid-cols-1  lg:mt-14 md:grid-cols-2">
+          <div className="col-span-1 mx-4">
+            <Title className="text-Black font-semibold  mb-10">O Cottura</Title>
             <Description className="text-Black mb-10 z-20 ">
               Aqui, no Cottura, celebramos a autenticidade e o sabor inigualável das massas frescas e recheadas. <br />
               Fundado com o propósito de compartilhar a riqueza da tradição italiana, nossa jornada culinária vai além do simples ato de cozinhar; é uma experiência dedicada a
               trazer um pedacinho da Itália para a sua mesa.
             </Description>
-            <div className="md:container mx-auto mb-6 md:mb-0 flex justify-around md:flex-row flex-col">
-              <Title className="text-Black mb-10">
-                Produtos <span className=" text-Cooper">Gourmet</span>
-              </Title>
-            </div>
+            <div className="md:container mx-auto mb-6 md:mb-0 flex justify-around md:flex-row flex-col"></div>
           </div>
-          <Image width={470} height={576} src="/agnolotti.jpg" alt="Pasta " />{" "}
+
+          <div className="relative w-full h-full  flex items-end justify-center">
+            <Image fill src="/pasta1.png" alt="Pasta " className="" />
+            <Title className="text-Beige/90 font-semibold mb-8">PASTA FRESCA</Title>
+          </div>
         </div>
       </div>
-
-      <div className="relative">
-        {" "}
-        <div className="md:ml-[350px] lg:ml-[650px] w-full absolute h-[980px] sm:h-[650px]  bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0" />
+      <div className="relative grid md:grid-cols-2 grid-cols-1 container pt-20">
+        <div className="md:ml-[350px] lg:ml-[650px] w-full absolute h-[980px] sm:h-[650px]  bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0 mt-8" />
+        <CarouselSpacing arrayImages={imageList} />
+        <div className="h-full justify-around flex flex-col">
+          <Title className="text-Black font-semibold w-full text-center ">Tradição com um Toque Moderno</Title>
+          <Description className="text-Black  text-center  z-20 ">
+            Mergulhamos nas raízes da cottura, mas com um olhar contemporâneo. <br />
+            No Cottura, a tradição italiana é revisitada, trazendo pratos modernos que respeitam o passado, mas estão sempre sintonizados com o presente.
+          </Description>{" "}
+          <Button className="mt-10 w-full   mx-auto px-10 ">
+            <Link href="/">Confira nossas receitas</Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
