@@ -1,3 +1,4 @@
+import About from "@/components/layout/About";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/layout/Hero";
 
@@ -13,9 +14,8 @@ export default function Home() {
       <Hero />
       <VideoIntro />
       <ProdutosGourmet />
-      <PastaCourse />
 
-      <Footer />
+      <PastaCourse />
     </main>
   );
 }

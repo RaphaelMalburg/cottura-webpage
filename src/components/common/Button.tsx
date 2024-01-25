@@ -22,7 +22,8 @@ const Button = ({ children, className, href, variant }: ButtonProps) => {
   };
 
   return (
-    <button className={`px-8 py-2  cursor-pointer rounded-full hover:scale-105 transition duration-300 ease-in-out text-lg md:text-2xl  ${variantResult()} ${className}`}>
+    <button
+      className={`px-8 py-2 animate-slidein cursor-pointer rounded-full hover:scale-105 transition duration-300 ease-in-out text-lg md:text-2xl  [--slidein-delay:300ms] ${variantResult()} ${className}`}>
       <Link href={href}>{children}</Link>
     </button>
   );

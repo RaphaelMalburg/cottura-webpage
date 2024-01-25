@@ -27,7 +27,7 @@ export function VideoIntro() {
           alt="logo"
           width={350}
           height={350}
-          className="border-b z-50  absolute grid place-content-center border-orange-50 pb-8 scale-90 md:scale-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="border-b z-30  absolute grid place-content-center border-orange-50 pb-8 scale-90 md:scale-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
       </div>
     </div>

@@ -12,27 +12,29 @@ const Hero = () => {
       <header className="grid px-8">
         <div className="md:container mx-auto  grid h-full w-full grid-cols-1  lg:mt-14 md:grid-cols-2">
           <div className="col-span-1">
-            <Title className="text-Black  font-semibold mb-10">
-              Massas <span className=" text-Cooper">frescas</span>,<br /> molhos <span className=" text-Cooper">artesanais</span> e<br /> produtos
+            <Title className="text-Black  font-semibold mb-10  [--slidein-delay:200ms] ">
+              Massas <span className=" text-Cooper ">frescas</span>,<br /> molhos <span className=" text-Cooper">artesanais</span> e<br /> produtos
               <span className=" text-Cooper"> gourmet</span>
             </Title>
-            <Description className="text-Black mb-10 z-20">Tudo cuidadosamente escolhido para transformar suas refeições em momentos extraordinários</Description>
-            <div className="grid grid-cols-2 md:grid-cols-1  h-96 ">
+            <Description className="text-Black mb-10 z-20  [--slidein-delay:300ms] ">
+              Tudo cuidadosamente escolhido para transformar suas refeições em momentos extraordinários
+            </Description>
+            <div className="grid grid-cols-2 md:grid-cols-1  h-96  ">
               {" "}
               <div className="grid grid-rows-3  justify-center mt-10 h-fit sm:grid-rows-1 sm:grid-cols-3 z-40 md:gap-10 gap-10">
-                <div className=" md:my-0 flex flex-col justify-start  ">
+                <div className=" md:my-0 flex flex-col justify-start animate-slidein [--slidein-delay:400ms]  ">
                   <h3 className="border-b-2 w-fit truncate font-semibold  mb-1.5 border-Black">724Kg+</h3>
                   <p className="text-Black font  text-sm">Em Farinha italiana por ano</p>
                 </div>{" "}
-                <div className=" md:my-0 flex flex-col justify-start ">
+                <div className=" md:my-0 flex flex-col justify-start animate-slidein [--slidein-delay:500ms]  ">
                   <h3 className="border-b-2 w-fit truncate font-semibold  mb-1.5 border-Black">3257 und+</h3>
                   <p className="text-Black text-sm">De Tortellonis feitos a mão</p>
                 </div>{" "}
-                <div className=" md:my-0 flex flex-col justify-start ">
+                <div className=" md:my-0 flex flex-col justify-start animate-slidein [--slidein-delay:600ms]  ">
                   <h3 className="border-b-2 w-fit truncate font-semibold  mb-1.5 border-Black">40+</h3>
                   <p className="text-Black text-sm">Workshops ao ano</p>
                 </div>{" "}
-                <Button size={"lg"} className="mt-10 hidden md:block  mx-auto  ">
+                <Button size={"lg"} className="mt-10 hidden md:block animate-slidein mx-auto [--slidein-delay:300ms]  ">
                   <Link href="/">Confira nossas receitas</Link>
                 </Button>
               </div>{" "}

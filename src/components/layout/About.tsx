@@ -8,7 +8,7 @@ import Link from "next/link";
 const About = () => {
   const imageList = ["/agnolotti.jpg", "/tortelloni.jpg", "/agnolotti2.jpg", "/cantucci.jpg"];
   return (
-    <div className="pt-36 lg:pt-40 grid w-full relative  overflow-hidden">
+    <div id="about" className=" pt-4 grid w-full relative  overflow-hidden">
       <div className="grid px-8 container">
         <div className="md:container mx-auto  grid h-fit w-full grid-cols-1  lg:mt-14 md:grid-cols-2">
           <div className="col-span-1 mx-4">
@@ -28,9 +28,9 @@ const About = () => {
         </div>
       </div>
       <div className="relative grid md:grid-cols-2 grid-cols-1 container pt-20">
-        <div className="md:ml-[380px] lg:ml-[580px] w-full absolute h-[980px] sm:h-[650px]  bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0 mt-8" />
+        <div className="md:ml-[350px] lg:ml-[650px] w-full absolute h-[980px] sm:h-[650px]  bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0 mt-8" />
         <CarouselSpacing arrayImages={imageList} />
-        <div className="h-full justify-around flex flex-col px-4">
+        <div className="h-full justify-around flex flex-col px-2">
           <Title className="text-Black font-semibold w-full  ">Tradição com um Toque Moderno</Title>
           <Description className="text-Black   z-20 ">
             Mergulhamos nas raízes da cottura, mas com um olhar contemporâneo. <br />

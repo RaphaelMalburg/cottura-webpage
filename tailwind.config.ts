@@ -66,10 +66,23 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        slidein: {
+          from: { opacity: "0", transform: "translateY(-100%)" },
+          to: { transform: "translateY(0)" },
+        },
+        slideout: {
+          from: { transform: "translateY(0)", opacity: "1" },
+          to: { transform: "translateY(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        slidein300: "slidein 1.2s ease 300ms forwards",
+        slidein500: "slidein 1.6s ease 500ms forwards",
+        slidein700: "slidein 2s ease 700ms forwards",
+        slidein900: "slideout 3s ease 900ms forwards",
+        slidein: "slidein 1s ease var(--slidein-delay,0) forwards",
       },
     },
   },

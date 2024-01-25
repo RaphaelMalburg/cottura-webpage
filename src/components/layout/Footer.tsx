@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Title from "../common/Title";
 import Description from "../common/Description";
@@ -5,13 +6,15 @@ import Button from "../common/Button";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Input } from "../ui/input";
-
+import { usePathname } from "next/navigation";
 const Footer = () => {
+  const pathname = usePathname();
+
   return (
     <section className=" w-full h-fit bg-Cooper ">
       <div>
         <Title className=" text-Beige mx-auto w-fit py-10">Localização</Title>
-        <Image src={"/pastaTayna.png"} width={900} height={400} alt="mapa" className="mx-auto" />
+        {pathname === "/" && <Image src={"/pastaTayna.png"} width={900} height={400} alt="mapa" className="mx-auto" />}
       </div>
       <div className="container">
         <Description className=" text-Beige mx-auto w-fit py-4">
@@ -36,10 +39,10 @@ const Footer = () => {
         <Image src={"/cotturalogospin.png"} alt="Cottura" width={400} height={300} className="  mx-auto border-b px-4  border-Beige pb-2 " />
         <footer className=" text-Beige py-8 container ">
           {" "}
-          <div className="grid md:grid-cols-2 grid-cols-1  container items-center gap-4 w-full mx-auto  ">
-            <Description className=" md:col-span-2 ">Newsletter</Description>
-            <div className=" col-span-2 grid grid-cols-2 gap-2">
-              <Input type="text" placeholder="Seu email aqui" className=" text-white mds:py-6 px-4 rounded-md justify-self-end max-w-[400px]" />
+          <div className="grid md:grid-cols-2 grid-cols-1    items-center gap-4 w-full mx-auto   ">
+            <Description className=" md:col-span-2  text-center">Newsletter</Description>
+            <div className=" col-span-2 grid grid-cols-1 md:grid-cols-2 gap-2">
+              <Input type="text" placeholder="Seu email aqui" className=" text-white md:py-6 px-4 rounded-md justify-self-end max-w-[400px]" />
               <Button href="/" variant="primary" className=" py-2 px-4 rounded-md max-w-[490px]">
                 Inscreva-se
               </Button>

@@ -10,12 +10,12 @@ const ProdutosGourmet = () => {
   const imageList = ["/agnolotti.jpg", "/tortelloni.jpg", "/agnolotti2.jpg", "/cantucci.jpg"];
   return (
     <div className="pt-28 lg:pt-20 grid md:h-[580px]  lg:h-[780px]  w-full relative">
-      <div className="md:container mx-auto mb-6 md:mb-0 flex justify-around md:flex-row flex-col">
+      <div className="md:container mx-auto mb-6 md:mb-0 grid justify-around md:flex-row grid-cols-1 md:grid-cols-2">
         {" "}
-        <Title className="text-Black  font-semibold mb-10">
+        <Title className="text-Black  font-semibold mb-10 ">
           Produtos <span className=" text-Cooper">Gourmet</span>
         </Title>
-        <Button size={"lg"} variant={"default"} className="    ">
+        <Button size={"lg"} variant={"default"} className=" px-10 py-2 w-full  ">
           <Link href="/">Produtos</Link>
         </Button>
       </div>
