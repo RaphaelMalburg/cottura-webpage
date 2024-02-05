@@ -52,7 +52,7 @@ export function Nav() {
             </Link>
           </li>
           <li>
-            <Link href={"/"} className="hover:border-2 border-Cooper px-2 py-1">
+            <Link href={"/recipes"} className="hover:border-2 border-Cooper px-2 py-1">
               Receitas
             </Link>
           </li>
@@ -85,7 +85,7 @@ export function Nav() {
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="p-4" onClick={closeMobileNav}>
+                <Link href={"/recipes"} className="p-4" onClick={closeMobileNav}>
                   Receitas
                 </Link>
               </li>

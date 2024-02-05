@@ -56,7 +56,8 @@ const Hero = () => {
             height={576}
             src="/pastanest.png"
             alt="Pasta nest"
-            className="  hidden md:block h-full max-h-[30rem]  max-w-[15rem] -translate-y-32 md:max-h-[38rem] mt-20  md:max-w-[18rem] lg:-mt-20 lg:max-h-[40rem] lg:max-w-[24rem] lg:translate-y-0"
+            className="  hidden md:block h-full max-h-[30rem]  max-w-[15rem] -translate-y-32 md:max-h-[38rem] mt-20  md:max-w-[18rem] lg:-mt-20 lg:max-h-[40rem] lg:max-w
+            -[24rem] lg:translate-y-0"
           />
         </div>
       </header>
