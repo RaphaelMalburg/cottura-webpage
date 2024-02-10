@@ -7,6 +7,14 @@ import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Input } from "../ui/input";
 import { usePathname } from "next/navigation";
+import { newsletterForm } from "@/lib/validations/newsletter-form";
+import { z } from "zod";
+import { Form, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { FormField } from "sanity";
+import { FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "../ui/form";
+import { NewsletterForm } from "../common/NewsletterForm";
+
 const Footer = () => {
   const pathname = usePathname();
 
@@ -41,12 +49,7 @@ const Footer = () => {
           {" "}
           <div className="grid md:grid-cols-2 grid-cols-1    items-center gap-4 w-full mx-auto   ">
             <Description className=" md:col-span-2  text-center">Newsletter</Description>
-            <div className=" col-span-2 grid grid-cols-1 md:grid-cols-2 gap-2">
-              <Input type="text" placeholder="Seu email aqui" className=" text-white md:py-6 px-4 rounded-md justify-self-end max-w-[400px]" />
-              <Button href="/" variant="primary" className=" py-2 px-4 rounded-md max-w-[490px]">
-                Inscreva-se
-              </Button>
-            </div>
+            <NewsletterForm />
           </div>
           <div className="container mx-auto flex md:justify-center justify-between items-center">
             <div className="grid w-fit lg:pl-40 md:pl-0 h-full  md:h-fit ">

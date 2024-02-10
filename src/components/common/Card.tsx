@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CarouselSpacing } from "./Carousel";
 import Link from "next/link";
 
-type CardRecipesProps = {
+export type CardRecipesProps = {
   title: string;
   description: string;
   imageList: string[];
@@ -17,7 +17,7 @@ type CardRecipesProps = {
 
 export function CardRecipes({ title, description, imageList = [], pathRecipe = "" }: CardRecipesProps) {
   return (
-    <Card className="w-[350px]">
+    <Card className="min-w-[280px] max-w-[500px] ">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
@@ -25,8 +25,7 @@ export function CardRecipes({ title, description, imageList = [], pathRecipe = "
         <CarouselSpacing arrayImages={imageList} />
       </CardContent>
       <CardFooter className="flex md:justify-between flex-col md:flex-row  gap-4 justify-start">
-        <CardDescription>{description}</CardDescription>
-        <Button>
+        <Button className="w-fit">
           <Link href={pathRecipe}>Confira Receita</Link>
         </Button>
       </CardFooter>

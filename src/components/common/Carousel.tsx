@@ -10,7 +10,7 @@ interface CarouselSpacingProps {
 
 export function CarouselSpacing({ arrayImages, className }: CarouselSpacingProps) {
   return (
-    <Carousel orientation="horizontal" className="relative w-full h-fit max-w-lg">
+    <Carousel orientation="horizontal" className={`relative w-full h-fit max-w-lg ${className}`}>
       <div className=" absolute  h-full w-full flex justify-between items-center">
         <CarouselPrevious className="z-40 -ml-10" />
         <CarouselNext className="z-40 -mr-10" />{" "}

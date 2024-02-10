@@ -4,6 +4,7 @@ export default defineType({
   name: "recipes",
   title: "Recipes",
   type: "document",
+
   fields: [
     defineField({
       name: "title",

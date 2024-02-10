@@ -5,9 +5,11 @@ type ButtonProps = {
   className?: string;
   href: string;
   variant: "primary" | "secondary" | "tertiary";
+  type?: "button" | "submit" | "reset" | undefined;
+  hrefOn?: boolean;
 };
 
-const Button = ({ children, className, href, variant }: ButtonProps) => {
+const Button = ({ children, className, href, variant, type, hrefOn }: ButtonProps) => {
   const variantResult = () => {
     switch (variant) {
       case "primary":
@@ -23,8 +25,9 @@ const Button = ({ children, className, href, variant }: ButtonProps) => {
 
   return (
     <button
+      type={type}
       className={`px-8 py-2 animate-slidein cursor-pointer rounded-full hover:scale-105 transition duration-300 ease-in-out text-lg md:text-2xl  [--slidein-delay:300ms] ${variantResult()} ${className}`}>
-      <Link href={href}>{children}</Link>
+      {hrefOn ? <Link href={href}>{children}</Link> : <span>{children}</span>}
     </button>
   );
 };
