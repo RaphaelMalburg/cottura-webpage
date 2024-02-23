@@ -17,7 +17,9 @@ import { NewsletterForm } from "../common/NewsletterForm";
 
 const Footer = () => {
   const pathname = usePathname();
-
+  const phoneNumber = "5547999389007";
+  const defaultMessage = `Olá, gostaria de saber mais sobre o Cottura.`;
+  const encodedMessage = encodeURIComponent(defaultMessage);
   return (
     <section className=" w-full h-fit bg-Cooper ">
       <div>
@@ -36,7 +38,7 @@ const Footer = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="mx-auto container xl:w-[1200px] h-[300px]"></iframe>
+            className="mx-auto container xl:w-[1200px] h-[180px] lg:h-[300px]"></iframe>
           <div className=" w-full container flex gap-1 flex-col my-2 mx-auto xl:w-[1200px] ">
             <Description className=" text-Beige mx-auto w-full ">R. 2650, 57 - sala 20 , Balneário Camboriú -SC </Description>
             <Description className=" text-Beige mx-auto w-full ">Ter - Sex : 11:00 - 19:00</Description>
@@ -47,16 +49,22 @@ const Footer = () => {
         <Image src={"/cotturalogospin.png"} alt="Cottura" width={400} height={300} className="  mx-auto border-b px-4  border-Beige pb-2 " />
         <footer className=" text-Beige py-8 container ">
           {" "}
-          <div className="grid md:grid-cols-2 grid-cols-1    items-center gap-4 w-full mx-auto   ">
+          <div className="grid md:grid-cols-2 grid-cols-1   items-center gap-4 w-full lg:w-2/3 mx-auto   ">
             <Description className=" md:col-span-2  text-center">Newsletter</Description>
             <NewsletterForm />
           </div>
           <div className="container mx-auto flex md:justify-center justify-between items-center">
             <div className="grid w-fit lg:pl-40 md:pl-0 h-full  md:h-fit ">
               <div className="hidden mx-auto items-center md:grid grid-cols-1 md:grid-cols-3  my-20  gap-14">
-                <FaFacebook className="text-white text-5xl hover:scale-110" />
-                <FaWhatsapp className="text-white text-5xl hover:scale-110" />
-                <FaInstagram className="text-white text-5xl hover:scale-110" />
+                <Link href={"https://www.facebook.com/cottura.bc/"}>
+                  <FaFacebook className="text-white text-5xl  hover:scale-110" />
+                </Link>
+                <Link href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`}>
+                  <FaWhatsapp className="text-white text-5xl hover:scale-110" />
+                </Link>
+                <Link href={"https://www.instagram.com/cotturapasta"}>
+                  <FaInstagram className="text-white text-5xl hover:scale-110" />
+                </Link>
               </div>
             </div>
 
@@ -77,22 +85,28 @@ const Footer = () => {
           <div className="grid w-full grid-cols-2 py-10 md:hidden ">
             <ul className="grid  justify-center items-center gap-2  font-bold tracking-wide text-lg my-auto cursor-pointer">
               <li className=" hover:border-2 w-auto px-4">
-                <Link href="/">O Cottura</Link>
+                <Link href="/about">O Cottura</Link>
               </li>
               <li className=" hover:border-2 w-auto px-4">
-                <Link href="/">Receitas</Link>
+                <Link href="/recipes">Receitas</Link>
               </li>
               <li className=" hover:border-2 w-auto px-4">
-                <Link href="/">Produtos</Link>
+                <Link href="/products">Produtos</Link>
               </li>
               <li className=" hover:border-2 w-auto px-4">
-                <Link href="/">Workshops</Link>
+                <Link href="/workshops">Workshops</Link>
               </li>
             </ul>
             <div className="items-center mx-auto flex  py-2 flex-col justify-between">
-              <FaFacebook className="text-white text-3xl  hover:scale-110" />
-              <FaWhatsapp className="text-white text-3xl hover:scale-110" />
-              <FaInstagram className="text-white text-3xl hover:scale-110" />
+              <Link href={"https://www.facebook.com/cottura.bc/"}>
+                <FaFacebook className="text-white text-3xl  hover:scale-110" />
+              </Link>
+              <Link href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`}>
+                <FaWhatsapp className="text-white text-3xl hover:scale-110" />
+              </Link>
+              <Link href={"https://www.instagram.com/cotturapasta"}>
+                <FaInstagram className="text-white text-3xl hover:scale-110" />
+              </Link>
             </div>
           </div>
           <div className=" border-t-[1px]  mx-auto w-full my-2">

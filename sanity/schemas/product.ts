@@ -1,10 +1,9 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "recipes",
-  title: "Recipes",
+  name: "product",
+  title: "Products",
   type: "document",
-
   fields: [
     defineField({
       name: "title",
@@ -25,7 +24,11 @@ export default defineType({
       title: "Short Description",
       type: "string",
     }),
-
+    defineField({
+      name: "spacing",
+      title: "Spacing - Add 2 or 3",
+      type: "number",
+    }),
     defineField({
       name: "images",
       title: "Images",
@@ -46,18 +49,16 @@ export default defineType({
         },
       ],
     }),
+
     defineField({
-      name: "description",
-      title: "Description",
-      type: "array",
-      of: [
-        {
-          title: "Block",
-          type: "block",
-          styles: [{ title: "Normal", value: "normal" }],
-          lists: [],
-        },
-      ],
+      name: "price",
+      title: "Price",
+      type: "number",
+    }),
+    defineField({
+      name: "stock",
+      title: "Stock",
+      type: "number",
     }),
   ],
   preview: {

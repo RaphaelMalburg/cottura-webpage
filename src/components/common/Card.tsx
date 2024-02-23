@@ -17,7 +17,7 @@ export type CardRecipesProps = {
 
 export function CardRecipes({ title, description, imageList = [], pathRecipe = "" }: CardRecipesProps) {
   return (
-    <Card className="min-w-[280px] max-w-[500px] ">
+    <Card className="min-w-[280px] max-w-[500px] hover:shadow-xl">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>

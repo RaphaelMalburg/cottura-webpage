@@ -16,7 +16,7 @@ type FormValues = z.infer<typeof newsletterForm>;
 
 export function NewsletterForm() {
   const pathname = usePathname();
-  const formRef = useRef();
+  const inputRef = useRef();
 
   const form = useForm<z.infer<typeof newsletterForm>>({
     resolver: zodResolver(newsletterForm),
@@ -39,28 +39,30 @@ export function NewsletterForm() {
       })
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        reset({ email: "" });
       })
       .catch((error) => {
         console.error("ERROR!", error);
       });
   }
+
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="  col-span-2 grid grid-cols-1 md:grid-cols-2 gap-2">
+      <form onSubmit={form.handleSubmit(onSubmit)} className=" grid col-span-2  grid-cols-1 md:grid-cols-2 gap-2 ">
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem className="grid">
               <FormControl>
-                <Input placeholder="Seu email aqui" {...field} className=" px-4 py-6 md:mx-0 mx-auto text-Black rounded-md justify-self-end max-w-[400px]" />
+                <Input placeholder="Seu email aqui" {...field} className=" px-4 py-6 md:mx-0 mx-auto my-auto text-Black rounded-md justify-self-end max-w-[450px]" />
               </FormControl>
 
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" variant={"secondary"} className="px-4 md:mx-0 mx-auto rounded-md max-w-[490px]">
+        <Button type="submit" variant={"secondary"} className="px-4 py-6 my-auto md:mx-0 mx-auto rounded-md  ">
           Inscreva-se
         </Button>
       </form>

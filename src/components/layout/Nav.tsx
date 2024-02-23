@@ -47,22 +47,22 @@ export function Nav() {
         <ul className=" hidden lg:flex w-full justify-center items-center gap-20 font-bold  tracking-wide text-lg my-auto cursor-pointer">
           {" "}
           <li>
-            <Link href={"/about"} className=" hover:border-2 border-Cooper px-2 py-1">
+            <Link href={"/about"} className=" hover:border-2 border-Cooper rounded-lg px-2 py-1">
               O Cottura
             </Link>
           </li>
           <li>
-            <Link href={"/recipes"} className="hover:border-2 border-Cooper px-2 py-1">
+            <Link href={"/recipes"} className="hover:border-2 border-Cooper rounded-lg px-2 py-1">
               Receitas
             </Link>
           </li>
           <li>
-            <Link href={"/"} className="hover:border-2 border-Cooper px-2 py-1">
+            <Link href={"/products"} className="hover:border-2 border-Cooper rounded-lg px-2 py-1">
               Produtos
             </Link>
           </li>
           <li className=" ">
-            <Link href={"/"} className="hover:border-2 border-Cooper px-2 py-1">
+            <Link href={"/workshops"} className="hover:border-2 border-Cooper rounded-lg px-2 py-1">
               Workshops
             </Link>
           </li>
@@ -74,7 +74,7 @@ export function Nav() {
           {isMobileNavOpen && <div className="fixed inset-0 bg-Black" onClick={closeMobileNav}></div>}
         </div>
         {isMobileNavOpen && (
-          <div onClick={closeMobileNav} className="fixed inset-0  bg-gray-100/85">
+          <div onClick={closeMobileNav} className="fixed inset-0  bg-gray-100/70">
             <div className=" cursor-pointer m-4 absolute">
               <IoClose size={35} onClick={closeMobileNav} />
             </div>
@@ -90,7 +90,7 @@ export function Nav() {
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="p-4" onClick={closeMobileNav}>
+                <Link href={"/products"} className="p-4" onClick={closeMobileNav}>
                   Produtos
                 </Link>
               </li>

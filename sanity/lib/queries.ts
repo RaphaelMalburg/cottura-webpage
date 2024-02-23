@@ -14,3 +14,18 @@ export const RECIPES_QUERY = groq`*[_type == "recipes"] {
   description,
 }
 `;
+
+export const PRODUCTS_QUERY = groq`*[_type == "product"] {
+  _id,
+  title,
+  slug,
+  shortDescription,
+  images[]{
+    "url": asset->url,
+    "alt": alt
+  },
+  description,
+  price,
+  stock
+}
+`;
