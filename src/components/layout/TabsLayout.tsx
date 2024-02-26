@@ -2,77 +2,34 @@
 
 import Image from "next/image";
 import { Tabs } from "../common/Tabs";
+import Title from "../common/Title";
+import Learn from "./Learn";
+import MakePasta from "./MakePasta";
+import MakePizza from "./MakePizza";
 
 export function TabsDemo() {
+  const dates = [{}];
   const tabs = [
     {
-      title: "Playground",
-      value: "playground",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Playground tab</p>
-          <DummyContent />
-        </div>
-      ),
+      title: "Workshops",
+      value: "workshops",
+      content: <Learn datesPasta="01/03/24 , 08/03/24" datesPizza="01/03/24 , 08/03/24" />,
     },
     {
       title: "Massas Artesanais",
       value: "massas-artesanais",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-Cooper to-CooperDark">
-          <p>Massas Artesanais</p>
-          <DummyContent />
-        </div>
-      ),
+      content: <MakePasta />,
     },
     {
       title: "Pão e Pizza",
       value: "pao-pizza",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-Cooper to-CooperDark">
-          <p>Pão e Pizza</p>
-          <DummyContent />
-        </div>
-      ),
-    },
-
-    {
-      title: "Content",
-      value: "content",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Content tab</p>
-          <DummyContent />
-        </div>
-      ),
-    },
-    {
-      title: "Random",
-      value: "random",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Random tab</p>
-          <DummyContent />
-        </div>
-      ),
+      content: <MakePizza />,
     },
   ];
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
+    <div className="h-full  [perspective:1000px] relative  flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
       <Tabs tabs={tabs} />
     </div>
   );
 }
-
-const DummyContent = () => {
-  return (
-    <Image
-      src=""
-      alt="dummy image"
-      width="1000"
-      height="1000"
-      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
-    />
-  );
-};

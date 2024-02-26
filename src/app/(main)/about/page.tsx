@@ -21,15 +21,14 @@ const About = () => {
             <div className="md:container mx-auto  mb-6 md:mb-0 flex justify-around md:flex-row flex-col"></div>
           </div>
 
-          <div className="relative w-full  h-[300px] max-w-lg flex items-end justify-center">
-            <Image fill src="/pasta1.png" alt="Pasta " className="object-cover" />
-            <Title className="text-Beige/80 font-semibold mb-8 ">PASTA FRESCA</Title>
+          <div className="relative w-full  h-[300px] max-w-lg flex items-end justify-center rounded-md">
+            <Image fill src="/pasta1.png" alt="Pasta " className="object-cover rounded-md" />
           </div>
         </div>
       </div>
       <div className="relative grid md:grid-cols-2 grid-cols-1 container pt-20">
         <div className="md:ml-[380px] lg:ml-[580px] w-full absolute h-[980px] sm:h-[650px]  bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0 mt-8" />
-        <CarouselSpacing arrayImages={imageList} />
+        <CarouselSpacing arrayImages={imageList} className="rounded-md" />
         <div className="h-full justify-around flex flex-col px-4">
           <Title className="text-Black font-semibold w-full  ">Tradição com um Toque Moderno</Title>
           <Description className="text-Black   z-20 ">

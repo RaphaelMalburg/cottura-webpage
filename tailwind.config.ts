@@ -51,6 +51,12 @@ const config = {
         Black: "#25272B",
         Beige: "#FFF8F2",
         CooperDark: "#BF7052",
+
+        CooperMoreDark: "#8F4D2F",
+
+        CooperLight: "#F4CBB2",
+        CooperAlmostBlack: "#1D1E20",
+        CooperLighter: "#FDEEE7",
       },
       borderRadius: {
         lg: "var(--radius)",

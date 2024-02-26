@@ -19,7 +19,7 @@ type TransformedProduct = {
   description: string;
   imageList: string[];
   price: number;
-  spacing: number; // You might want to adjust the type based on the actual type of spacing
+  spacing: number;
 };
 
 export const LayoutGrid = ({ cards }: { cards: TransformedProduct[] }) => {

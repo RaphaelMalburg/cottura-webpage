@@ -24,7 +24,7 @@ const Footer = () => {
     <section className=" w-full h-fit bg-Cooper ">
       <div>
         <Title className=" text-Beige mx-auto w-fit py-10">Localização</Title>
-        {pathname === "/" && <Image src={"/pastaTayna.png"} width={900} height={400} alt="mapa" className="mx-auto" />}
+        {pathname === "/" && <Image src={"/pastaTayna.png"} width={800} height={300} alt="mapa" className="mx-auto" />}
       </div>
       <div className="container">
         <Description className=" text-Beige mx-auto w-fit py-4">
