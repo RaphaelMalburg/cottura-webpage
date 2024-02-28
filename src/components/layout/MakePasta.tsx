@@ -2,16 +2,17 @@ import Link from "next/link";
 import Description from "../common/Description";
 import Title from "../common/Title";
 import { Button } from "../ui/button";
+import SubTitle from "../common/SubTitle";
 
 const MakePasta = () => {
   const phoneNumber = "5547999389007";
   const defaultMessage = `Olá, gostaria de inscrever no workshop de massas frescas .`;
   const encodedMessage = encodeURIComponent(defaultMessage);
   return (
-    <div className="w-full md:container overflow-hidden relative h-fit rounded-2xl p-10 text-Black">
-      <Title>
-        Workshop de <span className=" text-Cooper">Massas Artesanais</span> - Criando Experiências Saborosas{" "}
-      </Title>
+    <div className="w-full md:container mx-auto grid max-w-full  overflow-hidden relative h-fit rounded-2xl p-10 text-Black">
+      <Title className=" text-Cooper ">Workshop de Massas Artesanais</Title>
+      <SubTitle className="pt-2 text-[40px]">Criando Experiências Saborosas</SubTitle>
+
       <div className="flex flex-col gap-4 pb-4">
         <div className="w-11/12 mx-auto relative rounded-xl overflow-hidden  pt-8"></div>
 
@@ -25,10 +26,10 @@ const MakePasta = () => {
           <li>
             Inclui:
             <ul>
-              <li>Aprendizado prático de massas artesanais. Uma recheada e uma não recheada</li>
-              <li>Degustação de vinho.</li>
-              <li>Entrada, primeiro prato e prato principal.</li>
-              <li>Demonstração e finalização com molhos.</li>
+              <li>- Aprendizado prático de massas artesanais. Uma recheada e uma não recheada</li>
+              <li>- Degustação de vinho.</li>
+              <li>- Entrada, primeiro prato e prato principal.</li>
+              <li>- Demonstração e finalização com molhos.</li>
             </ul>
           </li>
           <li>Investimento: R$280,00 (Pagamento antecipado).</li>

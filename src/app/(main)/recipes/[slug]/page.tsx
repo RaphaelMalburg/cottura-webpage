@@ -17,7 +17,7 @@ const RecipesPresentation = async ({ params }: { params: { slug: string } }) => 
   const filteredData = initial.data.filter((recipe) => recipe.slug.current === slug);
 
   return (
-    <section className="pt-36 lg:pt-40 w-full relative overflow-hidden sm:container my-20">
+    <section className="pt-36 lg:pt-40 w-full relative overflow-hidden sm:container my-20 container">
       {/* Render your filtered data here */}
       {filteredData.map((recipe: SanityDocument) => (
         <div key={recipe._id} className="w-full h-fit grid grid-cols-1 md:grid-cols-3">
@@ -26,7 +26,7 @@ const RecipesPresentation = async ({ params }: { params: { slug: string } }) => 
           </div>
           <div className=" col-span-1   grid gap-4 ">
             <Title className="font-semibold"> {recipe.title}</Title>
-            <Description>{recipe.shortDescription}</Description>
+            <Description className="font-semibold">{recipe.shortDescription}</Description>
 
             <PortableText value={recipe.description} />
           </div>

@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import VideoIntro from "./VideoIntro";
 import { CarouselSpacing } from "../common/Carousel";
+import SubTitle from "../common/SubTitle";
 
 const ProdutosGourmet = () => {
   const imageList = ["/agnolotti.jpg", "/tortelloni.jpg", "/agnolotti2.jpg", "/cantucci.jpg"];
@@ -12,21 +13,19 @@ const ProdutosGourmet = () => {
     <div className="pt-28 lg:pt-20 grid md:h-[580px]  lg:h-[780px]  w-full relative">
       <div className="md:container mx-auto mb-6 md:mb-0 grid justify-around md:flex-row grid-cols-1 md:grid-cols-2">
         {" "}
-        <Title className="text-Black  font-semibold mb-10 ">
+        <Title className="text-Black  font-semibold mb-4 ">
           Produtos <span className=" text-Cooper">Gourmet</span>
         </Title>
         <Button size={"lg"} variant={"default"} className=" px-10 py-2 w-full  ">
           <Link href="/products">Produtos</Link>
         </Button>
       </div>
-      <div></div>
+
       <div className="md:ml-[350px] lg:ml-[650px] w-full absolute h-[980px] sm:h-[650px]  bg-gray-100 rounded-tl-[140px] -z-10 top-0 left-0" />
       <header className="grid px-8">
         <div className="md:container mx-auto  grid h-full w-full grid-cols-1  lg:mt-14 md:grid-cols-2">
           <div className="col-span-1">
-            <Title className="text-Black font-semibold mb-10">
-              Descubra o prazer de cozinhar com os <span className=" text-Cooper">melhores</span> ingredientes
-            </Title>
+            <SubTitle className="text-Black font-semibold mb-10">Descubra o prazer de cozinhar com os melhores ingredientes</SubTitle>
             <Description className="text-Black mb-10 z-20 ">
               Em nossa loja, oferecemos uma seleção excepcional de crispies de Parma, crocantes de parmesão, molho funghi, molho de tomates, farinha italiana premium e acessórios
               de alta qualidade, tudo para elevar sua paixão pela culinária.

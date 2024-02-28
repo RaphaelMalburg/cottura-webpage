@@ -12,7 +12,6 @@ import Title from "@/components/common/Title";
 export default async function Products() {
   const initial = await loadQuery<SanityDocument[]>(PRODUCTS_QUERY);
 
-  console.log(initial.data);
   const data = initial.data.map((item) => {
     return {
       id: item._id,

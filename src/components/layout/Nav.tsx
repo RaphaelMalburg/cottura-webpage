@@ -92,7 +92,7 @@ export function Nav() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"/"} className="p-4" onClick={closeMobileNav}>
+                  <Link href={"/workshops"} className="p-4" onClick={closeMobileNav}>
                     Workshops
                   </Link>
                 </li>

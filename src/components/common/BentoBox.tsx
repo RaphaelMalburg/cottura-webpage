@@ -35,7 +35,6 @@ export const LayoutGrid = ({ cards }: { cards: TransformedProduct[] }) => {
     setSelected(null);
   };
 
-  console.log(cards);
   return (
     <div className="w-full h-full lg:p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 ">
       {cards.map((card, i) => (
@@ -110,7 +109,7 @@ const SelectedCard = ({ selected }: { selected: TransformedProduct | null }) => 
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative lg:px-8 pb-4 z-[70]   w-fit bg-Black/40">
+        className="relative lg:px-8 pb-4 z-[70]   w-fit bg-Black/80">
         {selected ? (
           <>
             <BentoContentItem
