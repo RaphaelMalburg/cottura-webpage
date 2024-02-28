@@ -3,13 +3,12 @@ import Description from "../common/Description";
 import Title from "../common/Title";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import VideoIntro from "./VideoIntro";
 
 const Hero = () => {
   return (
     <div className="pt-28 lg:pt-20 grid  w-full ">
       <div className=" md:w-7/12 w-full absolute h-[720px] bg-gray-100  rounded-br-[140px]   -z-20" />
-      <header className="grid px-8">
+      <div className="grid px-8">
         <div className="md:container mx-auto  grid h-full w-full grid-cols-1  lg:mt-14 md:grid-cols-2">
           <div className="col-span-1">
             <Title className="text-Black  font-semibold mb-10  [--slidein-delay:200ms] ">
@@ -50,7 +49,7 @@ const Hero = () => {
               <Link href="/">Confira nossas receitas</Link>
             </Button>
           </div>
-          {/**inicio img mobile */}
+
           <Image
             width={470}
             height={576}
@@ -60,7 +59,7 @@ const Hero = () => {
             -[24rem] lg:translate-y-0"
           />
         </div>
-      </header>
+      </div>
     </div>
   );
 };

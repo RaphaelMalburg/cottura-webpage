@@ -6,6 +6,7 @@ import PastaCourse from "@/components/layout/PastaCourse";
 
 import ProdutosGourmet from "@/components/layout/ProdutosGourmet";
 import VideoIntro from "@/components/layout/VideoIntro";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {

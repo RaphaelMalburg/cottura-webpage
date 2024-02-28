@@ -7,11 +7,6 @@ import Title from "../common/Title";
 import Description from "../common/Description";
 
 export function VideoIntro() {
-  const videoElement = document.getElementById("yourVideoElementId");
-
-  videoElement?.addEventListener("enterpictureinpicture", (event) => {
-    event.preventDefault();
-  });
   return (
     <div className="p-8  ">
       <div className=" container mx-auto place-content-center rounded-xl relative md:w-8/12  py-4 shadow-md h-fit md:pb-40 pb-32">

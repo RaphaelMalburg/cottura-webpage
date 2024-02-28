@@ -15,7 +15,7 @@ export default async function WorkShop() {
       pizzaDates: item.pizzaDates,
     };
   });
-  console.log(data);
+
   return (
     <section className="pt-36 lg:pt-40 grid w-full relative  overflow-hidden">
       <Learn datesPasta={data[0].pastaDates} datesPizza={data[0].pizzaDates} />

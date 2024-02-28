@@ -18,7 +18,6 @@ const RecipesPresentation = async ({ params }: { params: { slug: string } }) => 
 
   return (
     <section className="pt-36 lg:pt-40 w-full relative overflow-hidden sm:container my-20 container">
-      {/* Render your filtered data here */}
       {filteredData.map((recipe: SanityDocument) => (
         <div key={recipe._id} className="w-full h-fit grid grid-cols-1 md:grid-cols-3">
           <div className=" col-span-2  ">
@@ -27,15 +26,8 @@ const RecipesPresentation = async ({ params }: { params: { slug: string } }) => 
           <div className=" col-span-1   grid gap-4 ">
             <Title className="font-semibold"> {recipe.title}</Title>
             <Description className="font-semibold">{recipe.shortDescription}</Description>
-
             <PortableText value={recipe.description} />
           </div>
-          {/*<Description className="font-medium">{recipe.description}</Description>   <CardRecipes
-            title={recipe.title}
-            description={recipe.shortDescription}
-            imageList={recipe.images.map((image: any) => image.url)}
-            pathRecipe={`/recipes/${recipe.slug.current}`}
-      />*/}
         </div>
       ))}
     </section>
