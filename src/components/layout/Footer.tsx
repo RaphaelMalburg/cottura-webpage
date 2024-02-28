@@ -110,10 +110,10 @@ const Footer = () => {
             </div>
           </div>
           <div className=" border-t-[1px]  mx-auto w-full my-2">
-            <Description className="text-[12px]  lg:text-[16px] mt-4 text-center">
+            <Description className="text-[9px]  lg:text-[14px] mt-4 text-center">
               © 2024 Cottura Pasta Fresca.
               <br className="md:hidden" /> Todos os direitos reservados. <br className="md:hidden" />
-              Desenvolvido por Raphael Malburg
+              <Link href={"https://github.com/RaphaelMalburg"}>Desenvolvido por Raphael Malburg</Link>
             </Description>
           </div>
         </footer>

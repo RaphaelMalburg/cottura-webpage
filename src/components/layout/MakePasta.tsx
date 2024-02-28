@@ -8,13 +8,15 @@ const MakePasta = () => {
   const defaultMessage = `Olá, gostaria de inscrever no workshop de massas frescas .`;
   const encodedMessage = encodeURIComponent(defaultMessage);
   return (
-    <div className="w-full overflow-hidden relative h-fit rounded-2xl p-10 text-Black">
-      <Title>Workshop de Massas Artesanais: Criando Experiências Saborosas </Title>
+    <div className="w-full md:container overflow-hidden relative h-fit rounded-2xl p-10 text-Black">
+      <Title>
+        Workshop de <span className=" text-Cooper">Massas Artesanais</span> - Criando Experiências Saborosas{" "}
+      </Title>
       <div className="flex flex-col gap-4 pb-4">
         <div className="w-11/12 mx-auto relative rounded-xl overflow-hidden  pt-8"></div>
 
         <Description>
-          Explore o universo das massas artesanais em nosso workshop exclusivo, limitado a 6 participantes. Com mãos na massa, você aprenderá a fazer massas recheadas e não
+          Explore o universo das massas artesanais em nosso Workshop exclusivo, limitado a 6 participantes. Com mãos na massa, você aprenderá a fazer massas recheadas e não
           recheadas, enquanto os molhos são demonstrados para finalizar suas criações.
         </Description>
         <ul className="grid gap-3">

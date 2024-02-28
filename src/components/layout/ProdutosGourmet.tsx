@@ -16,7 +16,7 @@ const ProdutosGourmet = () => {
           Produtos <span className=" text-Cooper">Gourmet</span>
         </Title>
         <Button size={"lg"} variant={"default"} className=" px-10 py-2 w-full  ">
-          <Link href="/">Produtos</Link>
+          <Link href="/products">Produtos</Link>
         </Button>
       </div>
       <div></div>

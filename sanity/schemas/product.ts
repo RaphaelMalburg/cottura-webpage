@@ -61,10 +61,4 @@ export default defineType({
       type: "number",
     }),
   ],
-  preview: {
-    select: {
-      title: "name",
-      media: "images.0", // Use the first image in the array for preview
-    },
-  },
 });

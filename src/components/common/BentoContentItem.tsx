@@ -17,18 +17,18 @@ export default function BentoContentItem({ imageList, content: title, shortDescr
   const defaultMessage = `Olá, gostaria de saber mais sobre ${title}.`;
   const encodedMessage = encodeURIComponent(defaultMessage);
   return (
-    <div className="relative grid place-content-center grid-cols-2 my-4">
-      <CarouselSpacing className="h-full w-full object-cover" arrayImages={imageList} />
+    <div className="relative grid grid-cols-1 place-content-center lg:grid-cols-2 my-4 pt-8">
+      <CarouselSpacing className="h-full w-full " arrayImages={imageList} />
       <div className="p-4 h-full flex flex-col justify-between">
-        <div>
+        <div className="w-full text-ellipsis">
           <p className="font-bold text-4xl text-white pb-4">{title}</p>
           <p className="font-normal text-base text-white">{shortDescription}</p>
         </div>
-        <div className="flex justify-between items-end">
-          <Badge variant={"secondary"} className="text-base my-auto">
-            {formatCurrency(price)}
+        <div className="grid justify-between items-end grid-cols-1 lg:grid-cols-2 gap-2">
+          <Badge variant={"secondary"} className="text-base my-auto place-content-center w-full">
+            {price ? formatCurrency(price) : null}
           </Badge>
-          <Button href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`} variant={"secondary"} hrefOn className="text-base hover:opacity-80">
+          <Button href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`} variant={"secondary"} hrefOn className="md:text-base text-sm hover:opacity-80">
             Peça já
           </Button>
         </div>

@@ -67,72 +67,41 @@ export function Nav() {
             </Link>
           </li>
         </ul>{" "}
-        <Sheet open={isMobileNavOpen} onOpenChange={setIsMobileNavOpen} modal={true}>
-          <SheetTrigger asChild>
-            <Button variant="ghost" className="lg:hidden block">
-              <IoMenu size={35} />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side={"right"} className="bg-gray-50/70">
-            <div className="grid gap-4 py-10">
-              <ul className="flex flex-col z-50 h-full w-full justify-center items-center gap-40 font-bold tracking-wide text-lg my-auto">
-                <li>
-                  <Link href={"/about"} className="w-auto p-4" onClick={closeMobileNav}>
-                    O Cottura
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/recipes"} className="p-4" onClick={closeMobileNav}>
-                    Receitas
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/products"} className="p-4" onClick={closeMobileNav}>
-                    Produtos
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/"} className="p-4" onClick={closeMobileNav}>
-                    Workshops
-                  </Link>
-                </li>
-              </ul>
+        <div className="lg:hidden block">
+          <Button variant="ghost" onClick={handleMobileNavToggle}>
+            <IoMenu size={35} />
+          </Button>
+          {isMobileNavOpen && <div className="fixed inset-0 bg-Black" onClick={closeMobileNav}></div>}
+        </div>
+        {isMobileNavOpen && (
+          <div onClick={closeMobileNav} className="fixed inset-0  bg-gray-100/70">
+            <div className=" cursor-pointer m-4 absolute">
+              <IoClose size={35} onClick={closeMobileNav} />
             </div>
-          </SheetContent>
-        </Sheet>
-        {/**      <Sheet open={isMobileNavOpen} >
-          <SheetHeader>
-            <SheetTitle>Menu</SheetTitle>
-            <SheetClose onClick={closeMobileNav}>
-              <IoClose size={30} />
-            </SheetClose>
-          </SheetHeader>
-          <SheetContent>
-            <ul className="flex flex-col items-center gap-10">
+            <ul className="flex flex-col z-50 h-full w-full justify-center items-center gap-40 font-bold tracking-wide text-lg my-auto">
               <li>
-                <Link href={"/about"} className="hover:border-2 border-Cooper rounded-lg px-2 py-1">
+                <Link href={"/about"} className="w-auto p-4" onClick={closeMobileNav}>
                   O Cottura
                 </Link>
               </li>
               <li>
-                <Link href={"/recipes"} className="hover:border-2 border-Cooper rounded-lg px-2 py-1">
+                <Link href={"/recipes"} className="p-4" onClick={closeMobileNav}>
                   Receitas
                 </Link>
               </li>
               <li>
-                <Link href={"/products"} className="hover:border-2 border-Cooper rounded-lg px-2 py-1">
+                <Link href={"/products"} className="p-4" onClick={closeMobileNav}>
                   Produtos
                 </Link>
               </li>
               <li>
-                <Link href={"/workshops"} className="hover:border-2 border-Cooper rounded-lg px-2 py-1">
+                <Link href={"/"} className="p-4" onClick={closeMobileNav}>
                   Workshops
                 </Link>
               </li>
             </ul>
-          </SheetContent>
-
-        </Sheet> */}
+          </div>
+        )}
       </div>
     </nav>
   );

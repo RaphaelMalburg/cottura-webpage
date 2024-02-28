@@ -21,7 +21,6 @@ type TransformedProduct = {
   price: number;
   spacing: number;
 };
-
 export const LayoutGrid = ({ cards }: { cards: TransformedProduct[] }) => {
   const [selected, setSelected] = useState<TransformedProduct | null>(null);
   const [lastSelected, setLastSelected] = useState<TransformedProduct | null>(null);
@@ -36,8 +35,9 @@ export const LayoutGrid = ({ cards }: { cards: TransformedProduct[] }) => {
     setSelected(null);
   };
 
+  console.log(cards);
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 ">
+    <div className="w-full h-full lg:p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 ">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.spacing > 1 ? ` col-span-${card.spacing}` : "")}>
           <motion.div
@@ -73,10 +73,12 @@ const BlurImage = ({ card, showTitle }: { card: TransformedProduct; showTitle: b
         src={card.imageList[0]}
         fill
         onLoad={() => setLoaded(true)}
-        className={cn("object-cover object-top absolute inset-0 h-full w-full transition duration-200", loaded ? "blur-none" : "blur-md")}
+        className={cn("object-cover  object-center absolute inset-0 h-full w-full transition duration-200", loaded ? "blur-none" : "blur-md")}
         alt="thumbnail"
       />
-      <h1 className={cn("absolute grid w-full h-full place-content-center text-white text-2xl font-bold transition duration-200", showTitle ? "opacity-0" : "opacity-100")}>
+      <h1
+        className={cn("absolute grid w-full h-full place-content-center text-white text-2xl font-bold transition duration-200", showTitle ? "opacity-0" : "opacity-100")}
+        style={{ textShadow: "2px 2px 6px rgba(0, 0, 0, 0.7)" }}>
         {card.content}
       </h1>
     </div>
@@ -108,7 +110,7 @@ const SelectedCard = ({ selected }: { selected: TransformedProduct | null }) => 
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative px-8 pb-4 z-[70]  w-fit bg-Black/40">
+        className="relative lg:px-8 pb-4 z-[70]   w-fit bg-Black/40">
         {selected ? (
           <>
             <BentoContentItem

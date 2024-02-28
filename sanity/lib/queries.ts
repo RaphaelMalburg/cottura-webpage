@@ -2,6 +2,13 @@
 
 import { groq } from "next-sanity";
 
+export const WORKSHOPS_QUERY = groq`*[_type == "workshops"] {
+  _id,
+  pastaDates,
+  pizzaDates
+}
+`;
+
 export const RECIPES_QUERY = groq`*[_type == "recipes"] {
   _id,
   title,
@@ -26,6 +33,7 @@ export const PRODUCTS_QUERY = groq`*[_type == "product"] {
   },
   description,
   price,
-  stock
+  stock,
+  spacing
 }
 `;

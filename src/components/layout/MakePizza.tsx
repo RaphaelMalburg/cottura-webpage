@@ -8,8 +8,11 @@ const MakePizza = () => {
   const defaultMessage = `Olá, gostaria de inscrever no workshop de Pão e Pizza .`;
   const encodedMessage = encodeURIComponent(defaultMessage);
   return (
-    <div className="w-full overflow-hidden relative rounded-2xl p-10 text-Black h-fit">
-      <Title> Workshop de Pão e Pizza: Uma Noite de Sabor e Aprendizado </Title>
+    <div className="w-full md:container overflow-hidden relative rounded-2xl p-10 text-Black h-fit">
+      <Title>
+        {" "}
+        Workshop de <span className=" text-Cooper">Pão e Pizza</span> - Uma Noite de Sabor e Aprendizado{" "}
+      </Title>
       <div className="flex flex-col gap-4 pb-4">
         <div className="w-11/12 mx-auto relative rounded-xl overflow-hidde  pt-8"></div>
 

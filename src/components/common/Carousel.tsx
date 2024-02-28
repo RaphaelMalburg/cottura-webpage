@@ -16,7 +16,7 @@ export function CarouselSpacing({ arrayImages, className }: CarouselSpacingProps
         <CarouselNext className="z-40 -mr-10" />{" "}
       </div>
       <CarouselContent className="-ml-1">
-        {arrayImages.map((imagePath, index) => (
+        {arrayImages?.map((imagePath, index) => (
           <CarouselItem key={index} className="pl-1">
             <div className="p-1">
               <Card>

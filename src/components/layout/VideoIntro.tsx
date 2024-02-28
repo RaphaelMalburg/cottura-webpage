@@ -7,6 +7,11 @@ import Title from "../common/Title";
 import Description from "../common/Description";
 
 export function VideoIntro() {
+  const videoElement = document.getElementById("yourVideoElementId");
+
+  videoElement?.addEventListener("enterpictureinpicture", (event) => {
+    event.preventDefault();
+  });
   return (
     <div className="p-8  ">
       <div className=" container mx-auto place-content-center rounded-xl relative md:w-8/12  py-4 shadow-md h-fit md:pb-40 pb-32">
@@ -20,7 +25,14 @@ export function VideoIntro() {
         </div>
       </div>
       <div className="relative max-w-6xl mx-auto -mt-20 md:h-[500px] h-[300px]  w-full ">
-        <video autoPlay src="/pastaout.mp4" loop muted id="video" className=" w-full object-cover object-bottom rounded-xl md:h-[500px] h-[300px]  "></video>
+        <video
+          autoPlay
+          src="/pastaout.mp4"
+          id="yourVideoElementId"
+          controlsList="nodownload nofullscreen"
+          loop
+          muted
+          className=" w-full object-cover object-bottom rounded-xl md:h-[500px] h-[300px] "></video>
         <div className="absolute w-full rounded-xl top-0 md:h-[500px] h-[300px] z-index-20 bg-black/30 " />
         <Image
           src={"/cotturaname.png"}
