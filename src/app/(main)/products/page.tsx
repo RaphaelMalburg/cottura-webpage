@@ -26,8 +26,8 @@ export default async function Products() {
   });
 
   return (
-    <div className="pt-36 lg:pt-40 grid w-full relative  overflow-hidden md:container px-2">
-      <Title className="text-Black  font-semibold mb-10 ">
+    <div className="pt-36 lg:pt-40 grid w-full relative  overflow-hidden md:container px-2 ">
+      <Title className="text-Black  font-semibold lg:mb-10 ">
         Produtos <span className=" text-Cooper">Gourmet</span>
       </Title>
 

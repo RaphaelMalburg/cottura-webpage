@@ -17,9 +17,9 @@ export default function BentoContentItem({ imageList, content: title, shortDescr
   const defaultMessage = `Olá, gostaria de saber mais sobre ${title}.`;
   const encodedMessage = encodeURIComponent(defaultMessage);
   return (
-    <div className="relative grid grid-cols-1 place-content-center lg:grid-cols-2 my-4 pt-8">
+    <div className="relative grid grid-cols-1 place-content-center lg:grid-cols-2 my-4 pt-8 lg:min-w-[850px] ">
       <CarouselSpacing className="h-full w-full " arrayImages={imageList} />
-      <div className="p-4 h-full flex flex-col justify-between">
+      <div className="p-4 h-full flex flex-col justify-between ">
         <div className="w-full text-ellipsis">
           <p className="font-bold text-4xl text-white pb-4">{title}</p>
           <p className="font-normal text-base text-white">{shortDescription}</p>

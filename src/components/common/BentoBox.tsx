@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
 import Image from "next/image";
 import BentoContentItem from "./BentoContentItem";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { X } from "lucide-react";
 
 type Card = {
   id: number;
@@ -21,6 +23,7 @@ type TransformedProduct = {
   price: number;
   spacing: number;
 };
+
 export const LayoutGrid = ({ cards }: { cards: TransformedProduct[] }) => {
   const [selected, setSelected] = useState<TransformedProduct | null>(null);
   const [lastSelected, setLastSelected] = useState<TransformedProduct | null>(null);
@@ -35,31 +38,23 @@ export const LayoutGrid = ({ cards }: { cards: TransformedProduct[] }) => {
     setSelected(null);
   };
 
+  const handleCloseClick = () => {
+    setLastSelected(selected);
+    setSelected(null);
+  };
+
   return (
     <div className="w-full h-full lg:p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 ">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.spacing > 1 ? ` col-span-${card.spacing}` : "")}>
-          <motion.div
-            onClick={() => handleClick(card)}
-            className={cn(
-              "relative overflow-hidden",
-              selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
-                : lastSelected?.id === card.id
-                ? "z-40 bg-white rounded-xl h-full w-full"
-                : "bg-white rounded-xl h-full w-full"
-            )}
-            layout>
-            {selected?.id === card.id && <SelectedCard selected={selected} />}
-            <BlurImage card={card} showTitle={selected ? true : false} />
-          </motion.div>
+          <Dialog>
+            <motion.div onClick={() => handleClick(card)} className={cn("relative overflow-hidden rounded-lg m-auto")} layout>
+              {selected?.id === card.id && <SelectedCard selected={selected} onClose={() => setSelected(null)} />}
+              <BlurImage card={card} showTitle={selected ? true : false} />
+            </motion.div>
+          </Dialog>
         </div>
       ))}
-      <motion.div
-        onClick={handleOutsideClick}
-        className={cn("absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10", selected?.id ? "pointer-events-auto" : "pointer-events-none")}
-        animate={{ opacity: selected?.id ? 0.3 : 0 }}
-      />
     </div>
   );
 };
@@ -67,7 +62,7 @@ export const LayoutGrid = ({ cards }: { cards: TransformedProduct[] }) => {
 const BlurImage = ({ card, showTitle }: { card: TransformedProduct; showTitle: boolean }) => {
   const [loaded, setLoaded] = useState(false);
   return (
-    <div className="relative w-full h-full">
+    <DialogTrigger className="relative w-full h-full" style={{ minHeight: "200px" }}>
       <Image
         src={card.imageList[0]}
         fill
@@ -78,24 +73,27 @@ const BlurImage = ({ card, showTitle }: { card: TransformedProduct; showTitle: b
       <h1
         className={cn("absolute grid w-full h-full place-content-center text-white text-2xl font-bold transition duration-200", showTitle ? "opacity-0" : "opacity-100")}
         style={{ textShadow: "2px 2px 6px rgba(0, 0, 0, 0.7)" }}>
-        {card.content}
+        {card.content || "Default Title"}
       </h1>
-    </div>
+    </DialogTrigger>
   );
 };
 
-const SelectedCard = ({ selected }: { selected: TransformedProduct | null }) => {
+const SelectedCard = ({ selected, onClose }: { selected: TransformedProduct | null; onClose: () => void }) => {
   return (
-    <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60] ">
+    <DialogContent className="  bg-transparent flex flex-col justify-center lg:min-w-[850px]  border-transparent items-center z-[60] ">
       <motion.div
         initial={{
           opacity: 0,
+          y: -100,
         }}
         animate={{
-          opacity: 0.6,
+          opacity: 1,
+          y: 0,
         }}
-        className="absolute inset-0 h-full w-fit bg-black opacity-60 z-10 "
+        className="absolute  inset-0 h-full opacity-60 z-10  "
       />
+
       <motion.div
         initial={{
           opacity: 0,
@@ -109,12 +107,15 @@ const SelectedCard = ({ selected }: { selected: TransformedProduct | null }) => 
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative lg:px-8 pb-4 z-[70]   w-fit bg-Black/80">
+        className="aboslute lg:px-8  z-[70]   w-fit bg-Black/80">
+        <DialogClose onClick={onClose} className="  cursor-pointer pt-5  text-end w-fit z-[80]">
+          <X className="h-6 w-6 text-white" />
+        </DialogClose>
         {selected ? (
           <>
             <BentoContentItem
               imageList={selected.imageList}
-              content={selected.content}
+              content={selected.content || "Default Content"}
               shortDescription={selected.shortDescription}
               description={selected.description}
               price={selected.price}
@@ -122,6 +123,6 @@ const SelectedCard = ({ selected }: { selected: TransformedProduct | null }) => 
           </>
         ) : null}
       </motion.div>
-    </div>
+    </DialogContent>
   );
 };

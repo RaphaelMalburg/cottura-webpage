@@ -16,7 +16,7 @@ type TransformedProduct = {
 };
 export function LayoutGridDemo({ LayoutGridProps }: { LayoutGridProps: TransformedProduct[] }) {
   return (
-    <div className="h-screen py-20 w-full">
+    <div className=" h-fit lg:py-20 py-10 w-full">
       <LayoutGrid cards={LayoutGridProps} />
     </div>
   );
